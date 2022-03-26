@@ -6,6 +6,9 @@ import pandas as pd
 from pydantic import BaseModel
 import sklearn.metrics
 import pickle
+
+import class_def
+from class_def import Foo 
 # FastAPI libray
 from fastapi import FastAPI
 
@@ -22,8 +25,9 @@ X_test=pd.read_csv('model/X_train_ech.csv')
 
 
 # read pickle files
-with open('model/score_objects2.pkl', 'rb') as handle:
-    clf_xgb_w, explainer_xgb = pickle.load(handle)  
+if __name__=='__main__':
+    with open('model/score_objects2.pkl', 'rb') as handle:
+        clf_xgb_w, explainer_xgb = pickle.load(handle)  
 
 # This struture will be used for Json validation.
 class Data(BaseModel):
