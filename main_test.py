@@ -17,13 +17,13 @@ app = FastAPI(title='Placement Analytics', version='0.24.2',
 # Initialize model artifacte files. This will be loaded at the start of FastAPI model server.
 #grid_result_xgb_w  = joblib.load('../model/grid_result_xgb_w.joblib')
 #xgb_wclf = joblib.load('model/clf_xgb_w.joblib')
-X_test=pd.read_csv('model/X_train_ech.csv')
+X_test=pd.read_csv('./model/X_train_ech.csv')
 #explainer=joblib.load('model/explainer_xgb.joblib')
 
 
 
 # read pickle files
-with open('model/score_objects2.pkl', 'rb') as handle:
+with open('./model/score_objects2.pkl', 'rb') as handle:
     clf_xgb_w, explainer_xgb = pickle.load(handle)  
 
 # This struture will be used for Json validation.
