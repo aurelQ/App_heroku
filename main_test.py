@@ -7,8 +7,6 @@ from pydantic import BaseModel
 import sklearn.metrics
 import pickle
 
-import class_def
-from class_def import Foo 
 # FastAPI libray
 from fastapi import FastAPI
 
