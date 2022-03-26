@@ -18,7 +18,7 @@ app = FastAPI(title='Placement Analytics', version='0.24.2',
 #grid_result_xgb_w  = joblib.load('../model/grid_result_xgb_w.joblib')
 _xgb_wclf = joblib.load('model/clf_xgb_w.joblib')
 X_test=pd.read_csv('model/X_train_ech.csv')
-explainer=pd.joblib.load('model/explainer_xgb.joblib')
+explainer=joblib.load('model/explainer_xgb.joblib')
 
 
 
