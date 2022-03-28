@@ -74,7 +74,7 @@ def predict(data: Data):
     # Return response back to client
     return result_dict
 
-#if __name__ == '__main__':
- #   uvicorn.run("main_test:app", host="0.0.0.0", port=8000, reload=True)
+if __name__ == '__main__':
+    uvicorn.run("main_test:app", host="0.0.0.0", port=8000, reload=True)
  #  uvicorn.run("main_test:app" reload=True)
     
