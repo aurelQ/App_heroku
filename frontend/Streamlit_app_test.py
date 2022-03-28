@@ -54,7 +54,7 @@ def run():
     if st.sidebar.button("Predict"):
 
         #Récupération de la prédiction et du score
-        response = requests.post("http://127.0.0.1:8000/predict", json=data)
+        response = requests.post("https://p7-final.herokuapp.com/docs#/default/predict_predict_post", json=data)
         prediction=json.loads(response.text)
         st.success("Le score prédit par l'algorithme est : " +  str(prediction["score"]))
         st.success("La prédiction de l'algo est : " + str(prediction["prediction"]))
