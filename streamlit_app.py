@@ -64,7 +64,7 @@ def run():
     if st.sidebar.button("Predict"):
 
         #Récupération de la prédiction et du score
-        response = requests.post("https://p7-final.herokuapp.com/predict", json=data)
+        response = requests.post("https://p7-bank-final.herokuapp.com/predict", json=data)
         prediction=json.loads(response.text)
 
         #Affichage des prédictions pour le client
